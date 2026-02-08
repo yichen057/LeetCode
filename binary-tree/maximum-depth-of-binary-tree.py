@@ -25,7 +25,7 @@ class Solution:
         # return depth
     # 方法二: 后续遍历的递归法求高度, 即最大深度
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        if not root:
+        if not root: #不必判断两遍，只保留 getDepth 里的 if not node: return 0 就够；若你更喜欢在入口显式处理空树，两处都写也可以。
             return 0
         
         return self.getDepth(root)
